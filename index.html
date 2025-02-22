@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Free Robux Generator</title>
+    <style>
+        body {
+            font-family: 'Trebuchet MS', sans-serif;
+            text-align: center;
+            background-color: #0F0F0F;
+            color: white;
+            padding: 20px;
+        }
+        .container {
+            max-width: 400px;
+            margin: auto;
+            padding: 20px;
+            background: linear-gradient(135deg, #008000, #004d00);
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 255, 0, 0.5);
+        }
+        input, select, button {
+            width: 90%;
+            padding: 10px;
+            margin: 10px 0;
+            font-size: 16px;
+            border: 2px solid #00FF00;
+            border-radius: 5px;
+        }
+        button {
+            background: #00CC00;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        button:hover {
+            background: #009900;
+        }
+        .loading, .verification, .success {
+            display: none;
+        }
+        .ad-container {
+            margin-top: 20px;
+            padding: 10px;
+            background: #222;
+            border: 2px dashed #00FF00;
+            border-radius: 5px;
+        }
+        h1 {
+            font-size: 28px;
+            color: #00FF00;
+            text-shadow: 0 0 10px #00FF00;
+        }
+    </style>
+</head>
+<body>
+    <h1>💰 Free Robux Generator 💰</h1>
+    
+    <div class="container">
+        <p>Enter your Roblox username and select an amount:</p>
+        <input type="text" id="username" placeholder="Roblox Username">
+        <select id="robuxAmount">
+            <option value="800">800 Robux</option>
+            <option value="1700">1700 Robux</option>
+            <option value="4500">4500 Robux</option>
+            <option value="10000">10,000 Robux</option>
+        </select>
+        <button onclick="startGenerator()">Generate</button>
+        
+        <div class="loading">
+            <p>⚙️ Generating Robux... Please wait. ⚙️</p>
+            <div class="ad-container">[ AD SPACE ]</div>
+        </div>
+        
+        <div class="verification">
+            <p>🔒 Verification Required! Complete the step below: 🔒</p>
+            <button onclick="watchAd()">🎥 Watch Ad to Proceed 🎥</button>
+            <div class="ad-container">[ AD SPACE ]</div>
+        </div>
+        
+        <div class="success">
+            <p>✅ Robux Successfully Added! ✅</p>
+            <p>It may take a few hours to reflect on your account.</p>
+            <button onclick="location.reload()">🔄 Generate Again 🔄</button>
+        </div>
+    </div>
+    <script>
+        function startGenerator() {
+            document.querySelector('.loading').style.display = 'block';
+            setTimeout(() => {
+                document.querySelector('.loading').style.display = 'none';
+                document.querySelector('.verification').style.display = 'block';
+            }, 5000); // Fake loading for 5 seconds
+        }
+        
+        function watchAd() {
+            alert("Watch an ad to continue!");
+            document.querySelector('.verification').style.display = 'none';
+            document.querySelector('.success').style.display = 'block';
+        }
+        
+    </script>
+</body>
+</html>
