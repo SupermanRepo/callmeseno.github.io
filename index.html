@@ -11,6 +11,11 @@
             background-color: #0F0F0F;
             color: white;
             padding: 20px;
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
         }
         .container {
             max-width: 400px;
@@ -47,6 +52,7 @@
             background: #222;
             border: 2px dashed #00FF00;
             border-radius: 5px;
+            text-align: center;
         }
         h1 {
             font-size: 28px;
@@ -71,13 +77,36 @@
         
         <div class="loading">
             <p>⚙️ Generating Robux... Please wait. ⚙️</p>
-            <div class="ad-container">[ AD SPACE ]</div>
+            <div class="ad-container">
+                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                <ins class="adsbygoogle"
+                    style="display:block"
+                    data-ad-client="ca-pub-xxxxxxxxxxxxxxxx"
+                    data-ad-slot="xxxxxxxxxx"
+                    data-ad-format="auto"
+                    data-full-width-responsive="true"></ins>
+                <script>
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+            </div>
         </div>
         
         <div class="verification">
             <p>🔒 Verification Required! Complete the step below: 🔒</p>
             <button onclick="watchAd()">🎥 Watch Ad to Proceed 🎥</button>
-            <div class="ad-container">[ AD SPACE ]</div>
+            <div class="ad-container">
+                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8021484983981578"
+     crossorigin="anonymous"></script>
+                <ins class="adsbygoogle"
+                    style="display:block"
+                    data-ad-client="ca-pub-xxxxxxxxxxxxxxxx"
+                    data-ad-slot="xxxxxxxxxx"
+                    data-ad-format="auto"
+                    data-full-width-responsive="true"></ins>
+                <script>
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+            </div>
         </div>
         
         <div class="success">
@@ -86,6 +115,7 @@
             <button onclick="location.reload()">🔄 Generate Again 🔄</button>
         </div>
     </div>
+    
     <script>
         function startGenerator() {
             document.querySelector('.loading').style.display = 'block';
@@ -100,7 +130,6 @@
             document.querySelector('.verification').style.display = 'none';
             document.querySelector('.success').style.display = 'block';
         }
-        
     </script>
 </body>
 </html>
